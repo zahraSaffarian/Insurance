@@ -1,0 +1,14 @@
+
+  @font-face {
+    font-family: 'IRANSansXV';
+    src: url('~/public/fonts/IRANSansXV.woff2')
+        format('woff2-variations'),
+      url('~/public/fonts/IRANSansXV.woff') format('woff-variations'),
+      url('~/public/fonts/IRANSansXV.woff') format('woff');
+    font-weight: 100 900;
+    font-display: block;
+  }
+
+  *{
+    font-family: 'IRANSansXV', sans-serif;
+  }

@@ -1,19 +1,17 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, useRoutes } from "react-router-dom";
+import appRoutes from "./appRoutes";
 import MainLayout from "./components/layouts/MainLayout";
-import Login from "./pages/Login";
-import ChooseInsurance from "./pages/ ChooseInsurance";
-import SalesInsurance from "./pages/SalesInsurance";
+
+const AppRoutes = () => {
+  return useRoutes(appRoutes);
+};
 
 const App: React.FC = () => {
   return (
     <Router>
       <MainLayout>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/about" element={<ChooseInsurance />} />
-          <Route path="/about" element={<SalesInsurance />} />
-        </Routes>
+        <AppRoutes />
       </MainLayout>
     </Router>
   );
